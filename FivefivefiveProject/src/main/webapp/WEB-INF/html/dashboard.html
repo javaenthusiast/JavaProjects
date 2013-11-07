@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Dashboard</title>
+	<link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	<link rel="stylesheet" href="assets/lib/Font-Awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" href="assets/css/theme.css">
+	<link rel="stylesheet" href="assets/lib/fullcalendar-1.6.2/fullcalendar/fullcalendar.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/flick/jquery-ui.css">
+
+	<script src="assets/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+
+<div id="top">
+	<!-- .navbar -->
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<header class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+		</header>
+
+
+		<div class="topnav">
+
+			<div class="btn-toolbar">
+				<div class="btn-group">
+					<a data-placement="bottom" data-original-title="Show / Hide Sidebar" data-toggle="tooltip" class="btn btn-success btn-sm" id="changeSidebarPos">
+						<i class="icon-resize-horizontal"></i>
+					</a>
+				</div>
+				<div class="btn-group">
+					<a data-placement="bottom" data-original-title="E-mail" data-toggle="tooltip" class="btn btn-default btn-sm">
+						<i class="icon-envelope"></i>
+						<span class="label label-warning">5</span>
+					</a>
+					<a data-placement="bottom" data-original-title="Messages" href="#" data-toggle="tooltip" class="btn btn-default btn-sm">
+						<i class="icon-comments"></i>
+						<span class="label label-danger">4</span>
+					</a>
+				</div>
+				<div class="btn-group">
+					<a data-placement="bottom" data-original-title="Document" href="#" data-toggle="tooltip" class="btn btn-default btn-sm">
+						<i class="icon-file"></i>
+					</a>
+					<a data-toggle="modal" data-original-title="Help" data-placement="bottom" class="btn btn-default btn-sm" href="#helpModal">
+						<i class="icon-question-sign"></i>
+					</a>
+				</div>
+				<div class="btn-group">
+					<a href="login.html" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom" class="btn btn-metis-1 btn-sm">
+						<i class="icon-off"></i>
+					</a>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+		<!-- /.topnav -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<!-- .nav -->
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="dashboard.html">Dashboard</a></li>
+				<li><a href="challenge.html">Challange</a></li>
+				<li><a href="rules.html">Rules</a></li>
+				<li><a href="awards.html">Awards</a></li>
+			</ul>
+			<!-- /.nav -->
+		</div>
+	</nav>
+	<!-- /.navbar -->
+
+	<!-- header.head -->
+	<header class="head">
+		<div class="search-bar">
+			<a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle">
+				<i class="icon-sort"></i>
+			</a>
+
+			<form class="main-search">
+				<div class="input-group">
+					<input type="text" class="input-small form-control" placeholder="Live Search ...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-sm" type="button"><i class="icon-search"></i></button>
+                                </span>
+				</div>
+			</form>
+
+		</div>
+		<!-- ."main-bar -->
+		<div class="main-bar">
+			<h3><i class="icon-dashboard"></i> Admin Dashboard</h3>
+		</div>
+		<!-- /.main-bar -->
+	</header>
+	<!-- end header.head -->
+
+
+</div>
+<!-- /#top -->
+
+<div id="left">
+	<div class="media user-media">
+		<a class="user-link" href="">
+			<img class="media-object img-thumbnail user-img" alt="User Picture" src="assets/img/user.gif">
+			<span class="label label-danger user-label">16</span>
+		</a>
+
+		<div class="media-body">
+			<h5 class="media-heading">Archie</h5>
+			<ul class="list-unstyled user-info">
+				<li><a href="">Administrator</a></li>
+				<li>Last Access : <br>
+					<small><i class="icon-calendar"></i> 16 Mar 16:32</small>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- #menu -->
+	<ul id="menu" class="collapse">
+		<li class="nav-header">Menu</li>
+		<li class="nav-divider"></li>
+		<li class="panel active">
+			<a href="#" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#dashboard-nav">
+				<i class="icon-dashboard"></i> Dashboard
+	    <span class="pull-right">
+		<i class="icon-angle-left"></i>
+            </span>
+			</a>
+			<ul class="collapse in" id="dashboard-nav">
+				<li class="active"><a href="dashboard.html"><i class="icon-angle-right"></i> Admin</a></li>
+				<li class=""><a href="user-dashboard.html"><i class="icon-angle-right"></i> User</a></li>
+				<li class=""><a href="alterne.html"><i class="icon-angle-right"></i> Alternative Style</a></li>
+			</ul>
+		</li>
+
+
+		<li><a href="chart.html"><i class="icon-bar-chart"></i> Charts</a></li>
+		<li><a href="calendar.html"><i class="icon-calendar"></i> Calendar</a></li>
+		<li><a href="blank.html"><i class="icon-check-empty"></i> Blank Page</a></li>
+		<li class="nav-divider"></li>
+		<li><a href="login.html"><i class="icon-signin"></i> Login Page</a></li>
+	</ul>
+	<!-- /#menu -->
+</div>
+<!-- /#left -->
+
+<div id="content">
+<div class="outer">
+<div class="inner">
+<div class="row">
+<div class="col-lg-6">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="box inverse">
+				<header>
+					<div class="icons"><i class="icon-pencil"></i></div>
+					<h5>Log Serving</h5>
+
+					<div class="toolbar">
+						<ul class="nav pull-right">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+									<i class="icon-list"></i>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="">q</a></li>
+									<li><a href="">a</a></li>
+									<li><a href="">b</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#log-serving">
+									<i class="icon-chevron-up"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.toolbar -->
+
+				</header>
+				<div id="log-serving" class="accordion-body body in" style="height: auto;">
+					<form action="#" class="form-horizontal" id="inline-validate" novalidate="novalidate">
+						<div class="form-group has-success">
+							<label class="control-label col-lg-4">What did you eat?</label>
+
+							<div class="col-lg-8">
+								<input type="text" id="required" name="required" class="form-control col-lg-6">
+							</div>
+						</div>
+						<!--<div class="form-group">-->
+						<!--<label class="control-label col-lg-4"># of Servings</label>-->
+
+						<!--<div class="col-lg-8">-->
+						<!--<input type="text" id="required" name="required" value="1" class="form-control col-lg-6">-->
+						<!--</div>-->
+						<!--</div>-->
+						<div class="form-group has-success">
+							<label class="control-label col-lg-4">Servings</label>
+
+							<div class="col-lg-8">
+								<span class="ui-spinner ui-widget ui-widget-content ui-corner-all"><input value="1" id="spin1" class="form-control ui-spinner-input" aria-valuenow="35" autocomplete="off" role="spinbutton"><a class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n">▲</span></span></a><a class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only" tabindex="-1" role="button" aria-disabled="false"><span class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s">▼</span></span></a></span>
+							</div>
+						</div>
+						<div class="form-group has-success">
+							<label class="control-label col-lg-4" for="userDPEntry">when</label>
+
+							<div class="col-lg-8">
+								<input type="text" class="form-control" value="02/16/12" data-date-format="mm/dd/yy" id="userDPEntry">
+							</div>
+						</div>
+						<!--<div class="form-group">-->
+						<!--<label class="control-label col-lg-4">Image</label>-->
+						<!--<div class="col-lg-8">-->
+						<!--<div class="fileupload fileupload-new" data-provides="fileupload"><input type="hidden">-->
+						<!--<div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image"></div>-->
+						<!--<div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>-->
+						<!--<div>-->
+						<!--<span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>-->
+						<!--<a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload">Remove</a>-->
+						<!--</div>-->
+						<!--</div>-->
+						<!--</div>-->
+						<!--</div>-->
+
+						<div class="form-group">
+							<label class="control-label col-lg-4">Image</label>
+							<div class="col-lg-8">
+								<div class="fileupload fileupload-new" data-provides="fileupload">
+													<span class="btn btn-file btn-default">
+														<span class="fileupload-new">Select file</span>
+														<span class="fileupload-exists">Change</span>
+														<input type="file">
+													</span>
+									<span class="fileupload-preview"></span>
+									<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="text4" class="control-label col-lg-4">Comments</label>
+
+							<div class="col-lg-8">
+								<textarea id="text4" class="form-control" style="margin-top: 0px; margin-bottom: 0px; height: 81px;"></textarea>
+							</div>
+						</div>
+						<div class="form-group form-actions">
+							<label for="text4" class="control-label col-lg-4"><i class="icon-arrow-right"></i></label>
+
+							<div class="col-lg-8">
+								<input type="submit" value="Submit" class="btn btn-primary pull-right">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="col-lg-6">
+
+	<div class="box inverse">
+		<header>
+			<div class="icons"><i class="icon-book"></i></div>
+			<h5>Your History</h5>
+
+			<div class="toolbar">
+				<ul class="nav pull-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="icon-th-large"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="">q</a></li>
+							<li><a href="">a</a></li>
+							<li><a href="">b</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#history">
+							<i class="icon-chevron-up"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.toolbar -->
+
+		</header>
+		<div id="history" class="accordion-body body in" style="height: auto;">
+			<div id="dataTable_wrapper" class="dataTables_wrapper form-inline" role="grid">
+				<div class="pull-left">
+					<div>
+						<a href="#">Total Servings: <span class="badge">42</span></a>
+					</div>
+				</div>
+				<div class="pull-right">
+					<div id="dataTable_length" class="dataTables_length">
+						<label>Show <select size="1" name="dataTable_length" aria-controls="dataTable"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>
+					</div>
+				</div>
+				<table id="dataTable" class="table table-bordered table-condensed table-hover table-striped sortableTable userTable dataTable">
+					<thead>
+					<tr role="row">
+						<th>what <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>#Servings <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>when <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>img <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>Comment <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>Edit <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+					</tr>
+					</thead>
+					<tbody role="alert" aria-live="polite" aria-relevant="all">
+					<tr class="odd success">
+						<td class="sorting_1">Apple</td>
+						<td>1</td>
+						<td>7/2/13</td>
+						<td>
+							<a class="thmb" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" ><img src="assets/img/fruit/apple.png"></a>
+						</td>
+						<td>...</td>
+						<td><a><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr class="success">
+						<td>Bannana</td>
+						<td>1</td>
+						<td>7/2/13</td>
+						<td><a class="thmb"><img src="assets/img/fruit/banana.png"></a></td>
+						<td>...</td>
+						<td><a><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr class="success">
+						<td>Tomato</td>
+						<td>1</td>
+						<td>7/3/13</td>
+						<td><a class="thmb"><img src="assets/img/fruit/tomato.png"></a></td>
+						<td>...</td>
+						<td><a><i class="icon-cog"></i></a></td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="row ui-sortable"><div class="col-lg-6"><div class="dataTables_filter" id="dataTable_filter"><label><i class="icon-search"></i> <input type="text" aria-controls="dataTable"></label></div></div><div class="col-lg-6"><div class="dataTables_paginate paging_bootstrap"><ul class="pagination"><li class="prev disabled"><a href="#"><i class="icon-arrow-left"></i> </a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#"><i class="icon-arrow-right"></i></a></li></ul></div></div></div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-lg-8">
+		<div class="box dark">
+			<header>
+				<div class="icons"><i class="icon-group"></i></div>
+				<h5>All Users</h5>
+
+				<div class="toolbar">
+					<ul class="nav pull-right">
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-list"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#all-users">
+								<i class="icon-chevron-up"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.toolbar -->
+
+			</header>
+			<div id="all-users" class="accordion-body body in" style="height: auto;">
+				<table class="table table-condensed table-hovered sortableTable">
+					<thead>
+					<tr>
+						<th>User <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>Active <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>Last entry date <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th>#Entries <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						<th><span class="pull-right">Edit</span></th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Ben</td>
+						<td><i class="icon-check-sign"></i> Yes</td>
+						<td>00:00:15</td>
+						<td>10</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr>
+						<td>Ashley</td>
+						<td><i class="icon-check-sign"></i> Yes</td>
+						<td>00:01:20</td>
+						<td>8</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr class="alert-danger">
+						<td>Mike</td>
+						<td><i class="icon-check-empty"></i> No</td>
+						<td>00:00:30</td>
+						<td>6</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr class="info">
+						<td>Dan</td>
+						<td><i class="icon-check-sign"></i> Yes</td>
+						<td>00:10:20</td>
+						<td>10</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr>
+						<td>Jennie</td>
+						<td><i class="icon-check-sign"></i> Yes</td>
+						<td>00:00:10</td>
+						<td>10</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr>
+						<td>Krysta</td>
+						<td><i class="icon-check-sign"></i> Yes</td>
+						<td>00:20:00</td>
+						<td>2</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					<tr class="success">
+						<td>Frank</td>
+						<td><i class="icon-check-sign"></i> Yes</td>
+						<td>00:10:00</td>
+						<td>9</td>
+						<td><a class="pull-right"><i class="icon-cog"></i></a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-lg-4">
+		<div class="box dark">
+			<header>
+				<div class="icons"><i class="icon-group"></i></div>
+				<h5>Users Chart</h5>
+
+				<div class="toolbar">
+					<ul class="nav pull-right">
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-list"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#user-chart">
+								<i class="icon-chevron-up"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.toolbar -->
+
+			</header>
+			<div id="user-chart" class="accordion-body body in" style="height: auto;">
+				<div class="body" id="trigo" style="height: 250px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+<div class="col-lg-8">
+	<div class="box dark">
+		<header>
+			<div class="icons"><i class="icon-th-large"></i></div>
+			<h5>Overview</h5>
+
+			<div class="toolbar">
+				<ul class="nav pull-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="icon-th-large"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="">q</a></li>
+							<li><a href="">a</a></li>
+							<li><a href="">b</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#overview">
+							<i class="icon-chevron-up"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.toolbar -->
+
+		</header>
+		<div id="overview" class="accordion-body body in" style="height: auto;">
+			<ul class="nav nav-tabs" id="myTabbed">
+				<li class="active"><a href="#leaders">Top Leaders</a></li>
+				<li><a href="#usage">Site Usage</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="leaders">
+					<table class="table table-condensed table-hovered sortableTable">
+						<thead>
+						<tr>
+							<th>User <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+							<th># of Entries <i class="icon-sort"></i><i class="icon-sort-down"></i><i class="icon-sort-up"></i></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="success">
+							<td>Frank</td>
+							<td>45</td>
+						</tr>
+						<tr>
+							<td>Ben</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>Ashley</td>
+							<td>12</td>
+						</tr>
+						<tr>
+							<td>Mike</td>
+							<td>22</td>
+						</tr>
+						<tr class="info">
+							<td>Dan</td>
+							<td>16</td>
+						</tr>
+						<tr class="alert-danger">
+							<td>Jennie</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Krysta</td>
+							<td>5</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tab-pane" id="usage">
+					<div class="text-center">
+						<ul class="stats_box">
+							<li>
+								<div class="sparkline bar_week"></div>
+								<div class="stat_text">
+									<strong>2.345</strong>Weekly Visit
+									<span class="percent down"> <i class="icon-caret-down"></i> -16%</span>
+								</div>
+							</li>
+							<li>
+								<div class="sparkline line_day"></div>
+								<div class="stat_text">
+									<strong>165</strong>Daily Visit
+									<span class="percent up"> <i class="icon-caret-up"></i> +23%</span>
+								</div>
+							</li>
+							<li>
+								<div class="sparkline pie_week"></div>
+								<div class="stat_text">
+									<strong>2,345.00</strong>Weekly Entries
+									<span class="percent"> 0%</span>
+								</div>
+							</li>
+							<li>
+								<div class="sparkline stacked_month"></div>
+								<div class="stat_text">
+									<strong>678.00</strong>Monthly Entries
+									<span class="percent down"> <i class="icon-caret-down"></i> -10%</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--<hr>-->
+					<!--<div class="text-center">-->
+
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-bolt icon-2x"></i>-->
+							<!--<span>default</span>-->
+							<!--<span class="label label-default">2</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-check icon-2x"></i>-->
+							<!--<span>danger</span>-->
+							<!--<span class="label label-danger">2</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-building icon-2x"></i>-->
+							<!--<span>No Label</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-envelope icon-2x"></i>-->
+							<!--<span>success</span>-->
+							<!--<span class="label label-success">-456</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-signal icon-2x"></i>-->
+							<!--<span>warning</span>-->
+							<!--<span class="label label-warning">+25</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-external-link icon-2x"></i>-->
+							<!--<span>π</span>-->
+							<!--<span class="label btn-metis-2">3.14159265</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-lemon icon-2x"></i>-->
+							<!--<span>é</span>-->
+							<!--<span class="label btn-metis-4">2.71828</span>-->
+						<!--</a>-->
+						<!--<a class="quick-btn" href="#">-->
+							<!--<i class="icon-glass icon-2x"></i>-->
+							<!--<span>φ</span>-->
+							<!--<span class="label btn-metis-3">1.618</span>-->
+						<!--</a>-->
+
+					<!--</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="col-lg-4">
+	<div class="box dark">
+		<header>
+			<div class="icons"><i class="icon-th-large"></i></div>
+			<h5>Make a Report</h5>
+
+			<div class="toolbar">
+				<ul class="nav pull-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="icon-th-large"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="">q</a></li>
+							<li><a href="">a</a></li>
+							<li><a href="">b</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#make-report">
+							<i class="icon-chevron-up"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.toolbar -->
+
+		</header>
+		<div id="make-report" class="accordion-body body in" style="height: auto;">
+			<form action="#" class="form-horizontal" id="inline-validate" novalidate="novalidate">
+				<div class="form-group has-success">
+					<label class="control-label col-lg-4">Name</label>
+
+					<div class="col-lg-8">
+						<input type="text" id="required" name="required" class="form-control col-lg-6">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-lg-4">Start</label>
+
+					<div class="col-lg-8">
+						<input type="date" id="date" name="date" class="form-control col-lg-6">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-lg-4">End</label>
+
+					<div class="col-lg-8">
+						<input type="date" id="date" name="date" class="form-control col-lg-6">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-lg-8">Omit inactive users</label>
+
+					<div class="col-lg-4">
+						<input type="checkbox" id="agree" name="agree" class="form-control col-lg-4">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-lg-8">Include serving details</label>
+
+					<div class="col-lg-4">
+						<input type="checkbox" id="agree" name="agree" class="form-control col-lg-4">
+					</div>
+				</div>
+
+				<div class="form-group form-actions">
+					<label class="control-label col-lg-4"><i class="icon-arrow-right"></i></label>
+
+					<div class="col-lg-8">
+						<input type="submit" value="Generate Report" class="btn btn-primary pull-right">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div class="box dark">
+			<header>
+				<div class="icons"><i class="icon-th-large"></i></div>
+				<h5>Challange Calendar</h5>
+
+				<div class="toolbar">
+					<ul class="nav pull-right">
+						<li><a href="#">Link</a></li>
+						<li class="dropdown">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-th-large"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="">q</a></li>
+								<li><a href="">a</a></li>
+								<li><a href="">b</a></li>
+							</ul>
+						</li>
+						<li>
+							<a class="accordion-toggle minimize-box" data-toggle="collapse" href="#cal">
+								<i class="icon-chevron-up"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.toolbar -->
+
+			</header>
+			<div id="cal" class="accordion-body body in" style="height: auto;">
+				<div id="calendar_content" class="body">
+					<div id='calendar'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- end .inner -->
+</div>
+<!-- end .outer -->
+</div>
+<!-- end #content -->
+
+
+
+</div>
+<!-- /#wrap -->
+
+
+<div id="footer">
+	<p>2013 &copy; 555 | STG Utah</p>
+</div>
+
+
+<!-- #helpModal -->
+<div id="helpModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- /#helpModal -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/lib/jquery-2.0.3.min.js"><\/script>')</script>
+
+<script src="assets/lib/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/style-switcher.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+<script src="assets/lib/fullcalendar-1.6.2/fullcalendar/fullcalendar.min.js"></script>
+<script src="assets/lib/tablesorter/js/jquery.tablesorter.min.js"></script>
+<script src="assets/lib/sparkline/jquery.sparkline.min.js"></script>
+<script src="assets/lib/daterangepicker/daterangepicker.js"></script>
+<script src="assets/lib/daterangepicker/moment.min.js"></script>
+<script src="assets/lib/datepicker/js/bootstrap-datepicker.js"></script>
+<script src="assets/lib/flot/jquery.flot.js"></script>
+<script src="assets/lib/flot/jquery.flot.selection.js"></script>
+<script src="assets/lib/flot/jquery.flot.resize.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+
+<script>
+	$(function() {
+		dashboard();
+		$('#myTabbed a:last').tab('show');
+		$('#myTabbed a').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+	});
+</script>
+
+
+</body>
+</html>
