@@ -2,12 +2,22 @@ package com.pluralsight.model;
 
 import java.util.Date;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
+
 public class Servings {
 
+	@NotEmpty
 	private String items;
+	
 	private Date date;
-	private double servings;
+	
+	@Range(min = 1, max = 5)
+	private int servings;
+	
 	private int userId;
+	
+	@NotEmpty
 	private String userName;
 
 	public int getUserId() {
@@ -42,11 +52,11 @@ public class Servings {
 		this.date = date;
 	}
 
-	public double getServings() {
+	public int getServings() {
 		return servings;
 	}
 
-	public void setServings(double servings) {
+	public void setServings(int servings) {
 		this.servings = servings;
 	}
 }

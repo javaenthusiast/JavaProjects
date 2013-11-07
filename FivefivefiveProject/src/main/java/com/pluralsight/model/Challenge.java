@@ -1,14 +1,17 @@
 package com.pluralsight.model;
 
+import org.hibernate.validator.constraints.Range;
+
 public class Challenge {
 
-	private double servings;
+	@Range(min = 1, max = 5)
+	private int servings;
 
-	public double getServings() {
+	public int getServings() {
 		return servings;
 	}
 
-	public void setServings(double servings) {
+	public void setServings(int servings) {
 		this.servings = servings;
 	}
 	

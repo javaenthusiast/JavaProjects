@@ -8,6 +8,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add Servings Page</title>
+
+<style>
+
+	.error {
+			color: #ff0000;
+		}
+		
+		.errorblock {
+			color: #000;
+			background-color: #ffEEEE;
+			border: 3px solid #ff0000;
+			padding: 8px;
+			margin: 16px;
+		}
+
+</style>
+
 </head>
 <body>
 
@@ -21,13 +38,17 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 
 
 <form:form commandName="servings">
+
+<form:errors path="*" cssClass="errorblock" element="div" />
 <fieldset>
 	<table>
 		<tr>
 			<td>
 				<spring:message code="task.text" />
 			</td>
-			<td><form:input path="items"/> </td>
+			<td><form:input path="items" cssClass="error" /> </td>
+			<td> <form:errors path="items" cssClass="error"/> </td>
+			
 		</tr>
 		
 		<tr>
@@ -37,7 +58,8 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 		
 		<tr>
 			<td><spring:message code="task2.text" /></td>
-			<td><form:input path="servings"/> </td>
+			<td><form:input path="servings" cssClass="error"/> </td>
+			<td> <form:errors path="servings" cssClass="error"/> </td>
 		</tr>
 		
 		<tr>
@@ -47,7 +69,8 @@ Language : <a href="?language=en">English</a> | <a href="?language=sp">Spanish</
 		
 		<tr>
 			<td><spring:message code="task4.text" /></td>
-			<td><form:input path="userName"/> </td>
+			<td><form:input path="userName" cssClass="error"/> </td>
+			<td> <form:errors path="userName" cssClass="error"/> </td>
 		</tr>
 		
 		<tr>
